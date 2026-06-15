@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Midnight Keys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app" aria-label="Keyboard piano">
+      <section class="panel">
+        <div class="brand">
+          <h1>Midnight Keys</h1>
+        </div>
+
+        <div class="controls" aria-label="Piano controls">
+          <button class="start-button" id="start-game" type="button">Start</button>
+
+          <label>
+            Volume
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="0.72">
+          </label>
+
+          <label>
+            Octave
+            <input id="octave" type="number" min="2" max="6" value="4">
+          </label>
+
+          <label>
+            Level
+            <select id="level">
+              <option value="apprentice" selected>Apprentice</option>
+              <option value="adept">Adept</option>
+              <option value="nightmare">Nightmare</option>
+            </select>
+          </label>
+
+          <label>
+            Song
+            <select id="song">
+              <optgroup label="Classics">
+                <option value="diesIrae">Dies Irae</option>
+                <option value="toccata">Toccata</option>
+                <option value="mountainKing">Mountain King</option>
+                <option value="moonlight">Moonlight</option>
+              </optgroup>
+              <optgroup label="Originals">
+                <option value="midnightProcessional" selected>Midnight Processional</option>
+                <option value="bloodMoonMarch">Blood Moon March</option>
+                <option value="cathedralPanic">Cathedral Panic</option>
+                <option value="vampireRave">Vampire Rave</option>
+                <option value="finalCoffin">Final Coffin</option>
+              </optgroup>
+            </select>
+          </label>
+
+          <label>
+            Sound
+            <select id="instrument">
+              <option value="harpsichord" selected>Harpsichord</option>
+              <option value="churchOrgan">Church organ</option>
+              <option value="cathedral">Gothic cathedral</option>
+              <option value="warmPiano">Warm piano</option>
+            </select>
+          </label>
+
+          <label class="toggle">
+            <input id="sustain" type="checkbox">
+            <span>Sustain</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="game" aria-label="Gothic note game">
+        <div class="stage" id="stage">
+          <div class="moon"></div>
+          <div class="hit-zone"></div>
+        </div>
+      </section>
+
+      <section class="keyboard" id="keyboard" aria-label="Piano keys"></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
